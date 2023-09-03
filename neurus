@@ -1,12 +1,13 @@
 #!/bin/bash
 
-echo "Welcome to Neurus!"
+echo "Welcome to Neurus! 🧞"
 echo "This is a virtual assistant like ChatGPT, but running on your system rather than your browser."
 echo "Please be extremelly careful and don't accept to run commands you don't know or may find destructive."
+echo "(currently, Neurus is wrapping/interfacing shell-genie)"
 echo "Anytime you want to exit: press Ctrl+C."
 
 while true; do
-  echo -n "What you want Neurus to do? Tell me: ❯ "
+  echo -n "What you want Neurus to do? 🧞‍♀️ Tell me: ❯ "
   read -r -e shellinput
   shell-genie ask "$shellinput"
 done
