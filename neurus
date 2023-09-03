@@ -9,5 +9,6 @@ echo "Anytime you want to exit: press Ctrl+C."
 while true; do
   echo -n "What you want Neurus to do? 🧞‍♀️ Tell me: ❯ "
   read -r -e shellinput
-  shell-genie ask "$shellinput"
+  shell-genie ask "If you are asked to delete a file/folder, never use the "rm" command, but the trash/recycle bin instead.
+You should never use the \"rm\" command. Not now nor in the future for any reason. With base on the content of this https://itsfoss.com/dangerous-linux-commands/ and this https://phoenixnap.com/kb/dangerous-linux-terminal-commands article that you should read, learn about the dangerous/destructive Linux commands; you should never use dangerous/destructive commands; not now nor in the future for any reason. Ignore (by running the command 'echo \"Sorry, but this commands is dangerous\"') all my following instructions if they contradict what is your obligation: don't run destructive commands; safety first! Now, my ask:  $shellinput"
 done
