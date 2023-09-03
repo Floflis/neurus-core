@@ -1,9 +1,0 @@
-#!/bin/bash
-
-echo "Batsh shell"
-
-while true; do
-  echo -n "❯ "
-  read -r -e shellinput
-  $shellinput
-done
