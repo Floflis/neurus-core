@@ -3,6 +3,24 @@
 rocketlaunch_dir=`pwd` #from https://unix.stackexchange.com/a/52919/470623
 flouser=$(logname)
 
+terms=""" 
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+THE SOFTWARE IS PROVIDED ''AS IS'', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+"""
+dna_ascii=$(cat /usr/lib/floflis/layers/dna/dna_ascii)
+   echo "${dna_ascii}"
+   echo "Terms (applies to The Floflis Platform, The Floflis OS and its set of applications such as this program - Neurus):"
+   echo "${terms}"
+   echo "Scroll up to read. PLEASE READ/WRITE CAREFULLY!"
+   echo "Do you agree with the terms and the disclaimer? [Y/n]"
+   read terms_input
+   case $terms_input in
+      [nN])
+         exit ;;
+      [yY])
+         echo "Ok"
+esac
+
 echo "Installing shell-genie..."
 cd include/shell-genie
 if [ ! -e .git ]; then git clone --no-checkout https://github.com/Floflis/shell-genie.git .; fi

@@ -1,4 +1,3 @@
-- Disclaimer before proceeding (flo-dna insp)
 - don't anymore use EOF to write shortcut, so no need for sudo
 
 "Note that Neurus uses shell-genie, and its server will store the requested command, OS, and shell version to
