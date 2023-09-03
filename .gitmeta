@@ -1,0 +1,8 @@
+chown -h 1000:1000 './shell-genie-window'
+chmod 0777 './shell-genie-window'
+/usr/bin/touch -hcmd "2023-09-03 13:55:16.6934565000 -0300" './shell-genie-window'
+/usr/bin/touch -hcad "2023-09-03 13:55:16.6934565000 -0300" './shell-genie-window'
+chown -h 1000:1000 './shell-genie-window-2'
+chmod 0777 './shell-genie-window-2'
+/usr/bin/touch -hcmd "2023-09-03 13:56:48.4016192000 -0300" './shell-genie-window-2'
+/usr/bin/touch -hcad "2023-09-03 13:56:48.4617866000 -0300" './shell-genie-window-2'
