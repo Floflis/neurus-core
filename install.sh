@@ -1,7 +1,28 @@
 #!/bin/sh
 
-echo "Installing neurus-core..."
+rocketlaunch_dir=`pwd` #from https://unix.stackexchange.com/a/52919/470623
+flouser=$(logname)
 
+echo "Installing shell-genie..."
+cd include/shell-genie
+if [ ! -e .git ]; then git clone --no-checkout https://github.com/Floflis/shell-genie.git .; fi
+if [ -e .git ]; then git pull; fi
+git checkout -f
+#chmod +x install.sh && ./install.sh
+#rm -f install.sh #use noah to exclude everything except .git
+#rm -rf colors
+#rm -rf src
+#rm -f INSTALL.md
+#rm -f LICENSE
+#rm -f readme.md
+#rm -f screenshot.png
+python3 -m pip install --user --break-system-packages pipx
+python3 -m pipx ensurepath
+sudo apt install python3-full
+pipx install shell-genie
+cd "$rocketlaunch_dir"
+
+echo "Installing neurus-core..."
 sudo cp -f neurus /usr/bin/neurus
 
 #if [ ! -e /usr/lib/ethgas ]; then sudo mkdir /usr/lib/ethgas; fi
