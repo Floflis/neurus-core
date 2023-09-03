@@ -52,25 +52,8 @@ cp include/neurus.svg /usr/share/icons/hicolor/scalable/apps/
 #sudo gtk-update-icon-cache /usr/share/icons/Floflis/ -f
 sudo gtk-update-icon-cache /usr/share/icons/hicolor/ -f
 
-cat > /usr/share/applications/neurus.desktop <<EOF
-[Desktop Entry]
-Type=Application
-Name=Neurus Assistant
-Comment=Your system-wide personal assistant! Powered by OpenAI's GPT-3.5
-# Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-Icon=neurus
-Exec=gnome-terminal --tab --title="Neurus " -- /bin/sh -c 'neurus'
-Terminal=false
-Hidden=false
-NoDisplay=false
-#DBusActivatable=true
-StartupNotify=true
-Categories=GNOME;GTK;Utility;X-GNOME-Utilities;
-# Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-Keywords=personal;assistant;gpt;gpt3;gpt35;chatgpt;
-#X-Purism-FormFactor=Workstation;Mobile;
-#X-Ubuntu-Gettext-Domain=org.gnome.Characters
-EOF
+echo "Installing shortcut..."
+sudo cp -f include/neurus.desktop /usr/share/applications/neurus.desktop
 
 installfail(){
    echo "Installation has failed."
