@@ -1,6 +1,1 @@
-First-use message (if /home/FLOUSER/.config/.shell_genie/config.json don't exist):
-"Note that Neurus uses shell-genie, and its server will store the requested command, OS, and shell version to improve the model. Also, we cannot guarantee that the server will be up and running 24/7."
-"Do you want to provide feedback about the generated commands to improve the models?"
-"Config file saved at /home/daniella/.config/.shell_genie/config.json"
-
 - auto prompt (filepeace-timecalc insp) - shell-genie has to be made safe first!

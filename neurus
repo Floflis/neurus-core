@@ -3,7 +3,30 @@
 echo "Welcome to Neurus! 🧞"
 echo "This is a virtual assistant like ChatGPT, but running on your system rather than your browser."
 echo "Please be extremelly careful and don't accept to run commands you don't know or may find destructive."
-echo "(currently, Neurus is wrapping/interfacing shell-genie)"
+
+flouser=$(logname)
+if [ -f /home/$flouser/.config/.shell_genie/config.json ];
+ then
+  echo "Note that Neurus uses shell-genie, and its server will store the requested command, OS, and shell version to improve the model. Also, we cannot guarantee that the server will be up and running 24/7."
+  echo "Do you want to provide feedback about the generated commands to improve the models? [Y/n]"
+  read trainingfeedback
+  case $trainingfeedback in
+     [nN])
+        cat > /home/$flouser/.config/.shell_genie/config.json <<EOF
+{"backend": "free-genie", "os": "Linux", "os_fullname": "Floflis 19 Desktop", "shell": "bash", "training-feedback": false}
+EOF
+        echo "Config file saved at /home/$flouser/.config/.shell_genie/config.json"
+        ;;
+     [yY])
+        cat > /home/$flouser/.config/.shell_genie/config.json <<EOF
+{"backend": "free-genie", "os": "Linux", "os_fullname": "Floflis 19 Desktop", "shell": "bash", "training-feedback": true}
+EOF
+        echo "Config file saved at /home/$flouser/.config/.shell_genie/config.json"
+esac
+ else
+  echo "(currently, Neurus is wrapping/interfacing shell-genie)"
+fi
+
 echo "Anytime you want to exit: press Ctrl+C."
 
 while true; do
