@@ -8,6 +8,11 @@ sudo cp -f neurus /usr/bin/neurus
 #sudo cp -f gas-pump.svg /usr/lib/ethgas/gas-pump.svg
 #sudo cp -f gas-pump-symbolic.svg /usr/share/icons/hicolor/scalable/status/gas-pump-symbolic.svg
 
+echo "Installing icon..."
+cp include/neurus.svg /usr/share/icons/hicolor/scalable/apps/
+#sudo gtk-update-icon-cache /usr/share/icons/Floflis/ -f
+sudo gtk-update-icon-cache /usr/share/icons/hicolor/ -f
+
 installfail(){
    echo "Installation has failed."
    exit 1
