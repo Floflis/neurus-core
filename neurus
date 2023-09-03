@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 echo "Welcome to Neurus! 🧞"
 echo "This is a virtual assistant like ChatGPT, but running on your system rather than your browser."
