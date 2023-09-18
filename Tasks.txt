@@ -1,1 +1,1 @@
-- auto prompt (filepeace-timecalc insp) - shell-genie has to be made safe first!
+- auto prompt (filepeace-timecalc insp) - shell-genie has to be made safe first! By using its own backend (~$2 monthly) /media/daniella/B/git/Floflis/Floflis/ZFrk/PRIVATE/shell-genie-backend
